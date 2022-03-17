@@ -1,7 +1,6 @@
 <template>
   <div>
     <Header />
-    <Tutorial />
   </div>
 </template>
 

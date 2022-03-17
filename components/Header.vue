@@ -3,11 +3,29 @@
     <h1 class="hd_title">Hello World!</h1>
     <ul class="hd_list">
       <nuxt-link class="hd_list__item" to="./">Home</nuxt-link>
-      <nuxt-link class="hd_list__item" to="./link1">Link1</nuxt-link>
-      <nuxt-link class="hd_list__item" to="./link2">Link2</nuxt-link>
+      <nuxt-link class="hd_list__item" :to="getToLink('link1')">Link1</nuxt-link>
+      <nuxt-link class="hd_list__item" :to="getToLink('link2')">Link2</nuxt-link>
     </ul>
   </div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+
+@Component
+export default class Header extends Vue {
+  toLink = {
+      link1: "/link1",
+      link2: "/link2",
+  }
+
+  getToLink(key:"link1"|"link2") :string{
+    return this.toLink[key] 
+  }
+}
+</script>
+
+
 <style lang="scss">
 .hd {
   width: 80%;
