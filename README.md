@@ -1,5 +1,24 @@
 # nuxt-pjt
 
+## ブランチ
+
+### develop
+マージ先 : なし
+
+### feature
+マージ先 : develop
+命名規則 : YYYYmmdd_{対応内容}
+
+## コミット
+fix : バグ修正
+add : 新規機能
+update : 機能修正
+remove : ファイル削除
+revert : 変更取消
+
+### 書き方例
+add:メール送信機能の追加
+
 ## Build Setup
 
 ```bash
